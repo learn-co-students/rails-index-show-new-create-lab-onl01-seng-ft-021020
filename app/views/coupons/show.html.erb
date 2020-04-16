@@ -1,0 +1,6 @@
+<h2>Your Selected Coupon:</h2>
+
+<h1><%= @coupon.coupon_code %> is valid at: <%= @coupon.store %></h1>
+
+<%= link_to "Edit Coupon", edit_coupon_path(@coupon) %>
+<%= link_to "Delete Coupon", coupon_path(@coupon), method: :delete %>

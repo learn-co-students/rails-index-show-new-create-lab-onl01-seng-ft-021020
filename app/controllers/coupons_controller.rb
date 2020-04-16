@@ -5,15 +5,9 @@ class CouponsController < ApplicationController
 
     def show
         @coupon = Coupon.find_by(id: params[:id])
-        if @coupon
-            render "show"
-        else
-            redirect_to coupons_path
-        end
     end
     
     def new
-        @coupon = Coupon.new
     end
 
     def create

@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html>  
-    <head>
-        <title>All Coupons</title>
-    </head>
-    <body>
+<% #require 'pry' %>
     <h1>Coupon Form</h1>
         <%= form_tag coupons_path do %>
             <label for="store">Store:</label>
-            <%= text_field_tag :store %>
+            <%= text_field_tag :'coupon[store]' %>
             <br>
             <label for="coupon_code">Coupon Code:</label>
-            <%= text_field_tag :coupon_code %>
+            <%= text_field_tag :'coupon[coupon_code]' %>
             <br>
             <%= submit_tag "Submit Coupon" %>
         <% end %>
-    </body>
-</html> 
